@@ -1,7 +1,18 @@
 ﻿@model Pokedex.ViewModels.PokemonViewModel
 
 <div style="background-color: @Model.Color">
-    <h1>@Model.Name</h1>
-    <h2>@Model.Number</h2>
-    <img src="@Model.Image"/>
+    <h1>Name: @Model.Name</h1>
+    <h2>Dex Number: @Model.Number</h2>
+    <div class="image-container">
+        <img src="@Model.ImageFront" />
+        <img src="@Model.ImageFemale" />
+        <img src="@Model.ImageBack" />
+        <img src="@Model.ImageFemaleBack" />
+        <img src="@Model.ImageFrontShiny" />
+        <img src="@Model.ImageFemaleShiny" />
+        <img src="@Model.ImageBackShiny" />
+        <img src="@Model.ImageFemaleBackShiny" />
+    </div>
+    <h3>Height: @Model.Height"</h3>
+    <h3>Weight: @Model.Weight Ibs</h3>
 </div>
