@@ -21,3 +21,4 @@ C:\code\PDT\pokedex\Pokedex\Pokedex\obj\Debug\netcoreapp2.1\Pokedex.Views.pdb
 C:\code\PDT\pokedex\Pokedex\Pokedex\obj\Debug\netcoreapp2.1\Pokedex.dll
 C:\code\PDT\pokedex\Pokedex\Pokedex\obj\Debug\netcoreapp2.1\Pokedex.pdb
 C:\code\PDT\pokedex\Pokedex\Pokedex\obj\Debug\netcoreapp2.1\Pokedex.csproj.CopyComplete
+C:\code\PDT\pokedex\Pokedex\Pokedex\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs

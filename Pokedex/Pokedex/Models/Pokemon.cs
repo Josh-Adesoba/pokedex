@@ -13,5 +13,7 @@ namespace Pokedex.Models
         public Sprites Sprites { get; set; }
         public int Height { get; set; }
         public int Weight { get; set; }
+        public NameUrl Species { get; set; }
+        public List<PokemonType> Types { get; set; }
     }
 }

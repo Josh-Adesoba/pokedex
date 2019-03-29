@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Linq;
+using System.Threading.Tasks;
 using Flurl;
 using Flurl.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -12,8 +13,11 @@ namespace Pokedex.Controllers
         [Route("pokemon/{name}")]
         public async Task<IActionResult> Index(string name)
         {
+
             var pokemon = await "https://pokeapi.co/api/v2/pokemon/".AppendPathSegment(name).GetJsonAsync<Pokemon>();
-//            var color = await "https://pokeapi.co/api/v2/pokemon-color/".AppendPathSegment(pokemon.Id).GetJsonAsync<Color>();
+            var species = await pokemon.Species.Url.GetJsonAsync<Species>();
+            var englishLang = species.Flavor_text_entries.Where(_ => _.Language.Name.Equals("en")).ToList();
+
             var viewModel = new PokemonViewModel
             {
                 Name = pokemon.Name,
@@ -28,7 +32,9 @@ namespace Pokedex.Controllers
                 ImageFemaleBackShiny = pokemon.Sprites.Back_Shiny_Female,
                 Number = pokemon.Id,
                 Height = pokemon.Height,
-                Weight = pokemon.Weight
+                Weight = pokemon.Weight,
+                FlavorText = englishLang,
+                Types = pokemon.Types
             };
             return View(viewModel);
         }

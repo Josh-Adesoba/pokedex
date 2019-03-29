@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Pokedex.Models;
 
 namespace Pokedex.ViewModels
 {
@@ -21,6 +22,8 @@ namespace Pokedex.ViewModels
         public string ImageFemaleBackShiny { get; set; }
 //        public string Image { get; set; }
         public string Color { get; set; }
+        public List<FlavorText> FlavorText { get; set; }
+        public List<PokemonType> Types { get; set; }
 
     }
 }
