@@ -15,11 +15,12 @@
         <ul>
             @foreach (var type in Model.Types)
             {
-                <li>@type.Type.Name</li>
+                <li><b>@type.Type.Name</b></li>
             }
         </ul>
     </div>
     <div class="image-container">
+        <h2>Sprites:</h2>
         <img src="@Model.ImageFemale" />
         <img src="@Model.ImageBack" />
         <img src="@Model.ImageFemaleBack" />
@@ -28,11 +29,14 @@
         <img src="@Model.ImageBackShiny" />
         <img src="@Model.ImageFemaleBackShiny" />
     </div>
+
     <h3>Height: @Model.Height"</h3>
     <h3>Weight: @Model.Weight Ibs</h3>
+
+    <h2>Dex Entries:</h2>
     @foreach (var flavorText in Model.FlavorText)
     {
+        <p><b>@flavorText.Version.Name:</b></p>
         <p>@flavorText.Flavor_text</p>
-        <p>@flavorText.Version.Name</p>
     }
 </div>
