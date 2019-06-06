@@ -6,12 +6,23 @@
 
 <div class="dex-container" style="background-color: @Model.Color">
     <div class="dexcard-wrapper">
-        <div class="left-shell"></div>
+        <div class="shell-container">
+        <div class="left-shell">
+            <div class="innerleft-shell">
+                <div class="buttons">
+                    <div class="button-background"></div>
+                    <div class="button-top button-background"></div>
+                    <div class="button-left button-background"></div>
+                    <div class="button-bottom button-background"></div>
+                    <div class="button-right button-background"></div>
+                </div>
+            </div>
+        </div>
         <div class="right-shell">
             <div class="innerright-shell">
                 <div class="card">
                     <div>
-                        <img src="@Model.ImageFront" />
+                        <img src="@Model.ImageFront"/>
                     </div>
                     <div class="card-info">
                         <h1>Name: @Model.Name</h1>
@@ -30,6 +41,7 @@
             </div>
         </div>
         </div>
+    </div>
     <div class="image-container">
         <h2>Sprites:</h2>
         <img src="@Model.ImageFront" />
